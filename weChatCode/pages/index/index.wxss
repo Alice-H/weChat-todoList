@@ -1,0 +1,154 @@
+/**index.wxss**/
+
+page {
+  background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534101495334&di=f2781cced38dcef83ace297633442dbe&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F001Ff98wzy74EWn9MgMb8%26690);
+  background-position: 0% 0%;
+  background-size: cover;
+}
+
+/** user area **/
+
+.userinfo {
+  width: 100%;
+  top: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-bottom: 12px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.userinfo-nickname {
+  display: block;
+  color: hsl(22, 70%, 60%);
+  text-align: left;
+  font-weight: bolder;
+}
+
+.user-area {
+  width: 128px;
+  display: inline-block;
+}
+
+.usermotto {
+  display: inline-block;
+  width: calc(100% - 128px);
+  padding: 10px;
+  color: hsl(22, 56%, 68%);
+}
+
+/** list area **/
+
+.list-area {
+  margin: 10px;
+  padding: 20px;
+  padding-top: 80rpx;
+  border-top: 1px solid rgb(177, 210, 199);
+}
+
+.list-area li {
+  list-style: none;
+  color: rgb(69, 126, 107);
+  padding: 6rpx;
+  display: block;
+}
+
+.list-area li:nth-child(odd) {
+  background: rgba(177, 210, 199, 0.2);
+}
+
+.list-area span {
+  list-style: none;
+  color: rgb(221, 86, 32);
+  text-align: right;
+  float: right;
+  font-size: 0.8em;
+  margin: 0px;
+  padding: 6rpx;
+  display: block;
+}
+
+/** motto area **/
+
+.motto-area {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  padding-top: 180rpx;
+  z-index: 1;
+  top: 0;
+}
+
+.motto-area input{
+  border: 2px solid  rgb(69, 126, 107);
+  background: white;
+  padding: 20rpx;
+  margin: 40px 20px;
+  height: 40px;
+}
+
+.motto-area button {
+  margin: 20px;
+  background: rgba(69, 126, 107, 0.6);
+  color: white;
+}
+
+/** add item area **/
+
+.add-item-area {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  padding-top: 180rpx;
+  z-index: 1;
+  top: 0;
+}
+
+.add-item-area input{
+  border: 2px solid rgb(69, 126, 107);
+  background: white;
+  padding: 20rpx;
+  margin: 40px 20px;
+  height: 40px;
+}
+
+.add-item-area button {
+  margin: 20px;
+  background: rgba(69, 126, 107, 0.6);
+  color: white;
+}
+
+
+/** bottom area **/
+
+.bottom-area {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.bottom-box {
+  flex: 1;
+  border-top: 5px solid  rgba(87, 119, 109, 0.1);
+  border-left: 5px solid  rgba(87, 119, 109, 0.2);
+  background: rgba(69, 126, 107, 0.8);
+  padding: 10rpx;
+  color: white;
+}
+
+.bottom-box:first-child {
+  border-left: none;
+}

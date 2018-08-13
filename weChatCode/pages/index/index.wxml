@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <view class="user-area">
+       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </view>
+    </block>
+    
+    <view class="usermotto">
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="user-motto">{{motto}}</text>
+    </view>
+    
+  </view>
+
+  <view class="list-area">
+    <div wx:for="{{todos}}" wx:key="{{index}}" data-index="{{ index }}">
+      <li class="list-item">
+        {{item.todoItem}}
+       <span bindtap="removeItem" data-index="{{ index }}">
+        刪除事項
+      </span>
+      </li>
+    </div>
+  </view>
+
+  <view hidden="{{mottoShow}}" class="motto-area">
+      <input type="text" placeholder="更改座右銘" bindinput="mottoInput" bindconfirm="saveMotto" value="{{tempVal}}"></input>
+      <button type="button" bindtap="saveMotto">確定</button>
+      <button type="button" bindtap="cancelMotto">取消</button>
+  </view>
+
+
+  <view hidden="{{addItemShow}}" class="add-item-area">
+      <input type="text" placeholder="新增事項" bindinput="addItemInput"  bindconfirm="showAddItem" value="{{newTodo}}"></input>
+      <button type="button" bindtap="saveAddItem">確定新增</button>
+      <button type="button" bindtap="cancelAddItem">取消新增</button>
+  </view>
+
+    <view class="bottom-area">
+      <div class="bottom-box" bindtap="showAddItem">新增事項</div>
+      <div class="bottom-box" bindtap="showMotto">更改座右銘</div>
+  </view>
+
+</view>
